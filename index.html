@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Niharika | Portfolio</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -10;
+      background-color: #0f0f0f;
+    }
+  </style>
+</head>
+<body class="text-[#F5F5F5] leading-relaxed tracking-wide relative overflow-x-hidden">
+
+  <!-- ✨ Animated Starfield Background -->
+  <div id="particles-js"></div>
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-[#0f0f0f] p-4 flex justify-center gap-6 z-50 shadow-md backdrop-blur">
+    <a href="#about" class="hover:text-[#9DC183] transition">About</a>
+    <a href="#projects" class="hover:text-[#9DC183] transition">Projects</a>
+    <a href="#experience" class="hover:text-[#9DC183] transition">Experience</a>
+    <a href="#skills" class="hover:text-[#9DC183] transition">Skills</a>
+    <a href="#contact" class="hover:text-[#9DC183] transition">Contact</a>
+
+  </nav>
+  <div class="h-16"></div>
+
+  <!-- Hero Section -->
+  <header class="flex flex-col md:flex-row items-center justify-center gap-10 text-center md:text-left py-24 px-6">
+    <!-- Profile Image -->
+    <img src="profile.jpg" alt="Profile Photo"
+      class="w-[280px] h-[350px] object-cover rounded-xl border-4 border-[#9DC183] shadow-xl"
+    />
+
+    <!-- Typing Text -->
+    <div class="max-w-xl">
+      <h1 id="typed-name" class="text-3xl md:text-5xl font-extrabold mb-4 drop-shadow-lg min-h-[64px] break-words text-center md:text-left"></h1>
+      <p class="text-xl text-[#B0B0B0] mb-6">MS CS @ NYU</p>
+      <p class="text-xl text-[#B0B0B0] mb-6">Building seamless full-stack applications and data-driven AI/ML systems with a user-first mindset. I bridge technical depth with intuitive design to deliver real-world impact.</p>
+
+      <div class="flex gap-4 flex-wrap justify-center md:justify-start">
+        <a href="#projects" class="bg-[#9DC183] hover:bg-[#7C9E68] text-black font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300">
+          View Projects
+        </a>
+        <a href="Niharika_Bhasin_Resume.pdf" target="_blank" class="border border-[#9DC183] text-[#9DC183] hover:bg-[#9DC183] hover:text-black font-semibold py-3 px-6 rounded-lg shadow transition duration-300">
+            View Resume
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+   <section id="about" class="p-10 max-w-4xl mx-auto" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold mb-4 text-center">👩‍💻 About Me</h2>
+    <div class="text-[#B0B0B0] text-center leading-relaxed space-y-3">
+        <p>
+            Hi, I’m <strong>Niharika</strong> — a developer, designer, and lifelong learner currently pursuing my MS in Computer Science at NYU.
+        </p>
+        <p>
+            I enjoy building full-stack web apps, training AI/ML models, and crafting thoughtful user experiences that feel as good as they work.
+        </p>
+        <p>
+            I’ve collaborated with startups, freelanced with 10+ clients, and led tech + design for projects I truly care about. Whether it’s code, design, or something in between — I love solving problems creatively.
+        </p>
+        <p class="font-semibold text-[#F5F5F5]">
+            Feel free to reach out — always happy to chat, brainstorm, or just talk tech ☕.
+        </p>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="p-10" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold mb-6 text-center">🚀 Projects</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+
+    <!-- Employee Attrition Prediction -->
+    <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 group hover:scale-[1.03]">
+      <img src="employee_project.jpg" alt="Analytics" class="w-full h-48 object-cover rounded-lg mb-4">
+      <h3 class="text-2xl font-semibold group-hover:text-[#9DC183]">Employee Attrition Prediction</h3>
+      <p class="text-[#B0B0B0] mt-2 mb-2">
+        ML pipeline with XGBoost, CatBoost, and SMOTE to predict attrition with 86% accuracy. Used SHAP for interpretability and improved minority class recall by 22%.
+      </p>
+      <p class="text-sm text-[#9DC183] mb-4">Tech Stack: Python, Scikit-learn, XGBoost, CatBoost, SHAP, SMOTE</p>
+      <a href="https://github.com/niharikabhasin/employee-attrition-prediction" target="_blank"
+         class="inline-block text-sm text-[#9DC183] border border-[#9DC183] px-4 py-2 rounded-md hover:bg-[#9DC183] hover:text-black transition">
+         Github Link
+      </a>
+    </div>
+
+    <!-- Chatly: Java Chat App -->
+    <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 group hover:scale-[1.03]">
+      <img src="chatly_project.jpg" alt="Chat App" class="w-full h-48 object-cover rounded-lg mb-4">
+      <h3 class="text-2xl font-semibold group-hover:text-[#9DC183]">Chatly: Java Chat App</h3>
+      <p class="text-[#B0B0B0] mt-2 mb-2">
+        Multi-user real-time chat app with Java Swing, MySQL, and socket programming. Includes login, avatars, emoji picker, and custom themes.
+      </p>
+      <p class="text-sm text-[#9DC183] mb-4">Tech Stack: Java, Swing, MySQL, TCP Sockets, SHA-256</p>
+      <a href="https://github.com/niharikabhasin/Chatly-MultiUser-Java-ChatApp" target="_blank"
+         class="inline-block text-sm text-[#9DC183] border border-[#9DC183] px-4 py-2 rounded-md hover:bg-[#9DC183] hover:text-black transition">
+         Github Link
+      </a>
+    </div>
+
+    <!-- CodeSync -->
+    <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 group hover:scale-[1.03]">
+      <img src="codesync_project.jpg" alt="AWS Cloud" class="w-full h-48 object-cover rounded-lg mb-4">
+      <h3 class="text-2xl font-semibold group-hover:text-[#9DC183]">CodeSync</h3>
+      <p class="text-[#B0B0B0] mt-2 mb-2">
+        Real-time collaborative code editor using React.js, AWS Lambda, DynamoDB, and WebSockets. Supports multi-user execution via EC2 and S3.
+      </p>
+      <p class="text-sm text-[#9DC183] mb-4">Tech Stack: React.js, AWS Lambda, API Gateway, DynamoDB, EC2, S3, WebSockets</p>
+    </div>
+
+    <!-- Portfolio Website -->
+    <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 group hover:scale-[1.03]">
+      <img src="portfolio_project.jpg" alt="Portfolio" class="w-full h-48 object-cover rounded-lg mb-4">
+      <h3 class="text-2xl font-semibold group-hover:text-[#9DC183]">Portfolio Website</h3>
+      <p class="text-[#B0B0B0] mt-2 mb-2">
+        Personal website crafted with Tailwind CSS, AOS animations, and JavaScript. Clean UI, responsive layout, and dynamic content with Typing.js + Particles.js.
+      </p>
+      <p class="text-sm text-[#9DC183] mb-4">Tech Stack: HTML, CSS, JavaScript, Tailwind CSS, AOS, Typing.js, Particles.js</p>
+      <a href="https://github.com/niharikabhasin/niharika-portfolio" target="_blank"
+         class="inline-block text-sm text-[#9DC183] border border-[#9DC183] px-4 py-2 rounded-md hover:bg-[#9DC183] hover:text-black transition">
+         Github Link
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="p-10" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold mb-6 text-center">💼 Experience</h2>
+  <div class="space-y-10">
+
+    <!-- Growth School -->
+    <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md">
+      <h3 class="text-xl font-semibold text-[#9DC183]">Software Development Intern @ Growth School</h3>
+      <p class="text-[#B0B0B0] text-sm mb-2">Mar 2023 – July 2023 · Delhi, India</p>
+      <ul class="list-disc list-inside text-[#CCCCCC] text-sm space-y-1">
+        <li>Built and scaled RESTful APIs using Django, PostgreSQL, and Redis to support 3x user concurrency.</li>
+        <li>Reduced page latency by 40% via query tuning, caching, and ORM profiling.</li>
+        <li>Developed ETL pipelines in Python; used cohort analysis and SQL to drive A/B tested features, boosting retention by 28%.</li>
+        <li>Containerized services using Docker and implemented JWT auth, CI/CD via GitHub Actions, and Agile collaboration.</li>
+      </ul>
+    </div>
+
+    <!-- Tynker -->
+    <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md">
+      <h3 class="text-xl font-semibold text-[#9DC183]">Product Intern @ Tynker</h3>
+      <p class="text-[#B0B0B0] text-sm mb-2">May 2021 – Dec 2021 · Remote, United States</p>
+      <ul class="list-disc list-inside text-[#CCCCCC] text-sm space-y-1">
+        <li>Designed and launched K12 coding features for 1M+ students; increased engagement and NPS.</li>
+        <li>Automated QA with Python and CI tools, cutting manual testing time by 30%.</li>
+        <li>Used SQL and Google Analytics to improve lesson completion and user retention by 15%.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Leadership & Extracurriculars -->
+<section id="leadership" class="p-10 pt-4" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold mb-6 text-center">🌟 Leadership & More</h2>
+  <div class="space-y-10">
+
+    <!-- Python Mentor -->
+    <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md">
+      <h3 class="text-xl font-semibold text-[#9DC183]">Python Mentor @ Coding Camps</h3>
+      <p class="text-[#B0B0B0] text-sm mb-2">2022 – 2023</p>
+      <ul class="list-disc list-inside text-[#CCCCCC] text-sm space-y-1">
+        <li>Taught over 100+ students Python basics, control flow, and OOP through hands-on projects.</li>
+        <li>Curated beginner-friendly tutorials and debug sessions for learners with no programming background.</li>
+      </ul>
+    </div>
+
+    <!-- Hackathon Leader -->
+    <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md">
+      <h3 class="text-xl font-semibold text-[#9DC183]">Hackathon Leader @ SRM Institute</h3>
+      <p class="text-[#B0B0B0] text-sm mb-2">2021 – 2022</p>
+      <ul class="list-disc list-inside text-[#CCCCCC] text-sm space-y-1">
+        <li>Organized 3 university-wide hackathons and mentored finalists in full-stack development.</li>
+        <li>Collaborated with teams to brainstorm, design, and pitch tech solutions under pressure.</li>
+      </ul>
+    </div>
+
+    <!-- Freelance Design -->
+    <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md">
+      <h3 class="text-xl font-semibold text-[#9DC183]">Freelance UI/UX Designer</h3>
+      <p class="text-[#B0B0B0] text-sm mb-2">2020 – Present</p>
+      <ul class="list-disc list-inside text-[#CCCCCC] text-sm space-y-1">
+        <li>Delivered modern, user-centric designs for 10+ startups using Figma, Adobe XD, and Framer.</li>
+        <li>Helped early-stage founders build landing pages, dashboards, and product prototypes with responsive design.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS SECTION -->
+<section id="skills" class="p-10 pt-6" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold mb-6 text-center">💡 Skills</h2>
+
+  <div class="flex flex-wrap justify-center gap-4 text-sm">
+
+    <!-- LANGUAGES -->
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-5 h-5" alt="Python">
+      <span>Python</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-5 h-5" alt="Java">
+      <span>Java</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" class="w-5 h-5" alt="C++">
+      <span>C/C++</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-5 h-5" alt="JavaScript">
+      <span>JavaScript</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-5 h-5" alt="HTML">
+      <span>HTML/CSS</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" class="w-5 h-5" alt="SQL">
+      <span>SQL</span>
+    </div>
+
+    <!-- FRAMEWORKS & LIBRARIES -->
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" class="w-5 h-5" alt="Django">
+      <span>Django</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" class="w-5 h-5" alt="PyTorch">
+      <span>PyTorch</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://sklearn.org/stable/_static/img/scikit-learn-logo-small.png" class="w-5 h-5" alt="Scikit-learn">
+      <span>Scikit-learn</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-5 h-5" alt="React">
+      <span>React.js</span>
+    </div>
+
+    <!-- TOOLS & PLATFORMS -->
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="w-5 h-5" alt="Docker">
+      <span>Docker</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" class="w-5 h-5" alt="Jenkins">
+      <span>Jenkins</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg" class="w-5 h-5" alt="AWS">
+      <span>AWS (EC2, S3, Lambda)</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-5 h-5" alt="Git">
+      <span>Git</span>
+    </div>
+
+    <!-- DATABASES -->
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="w-5 h-5" alt="PostgreSQL">
+      <span>PostgreSQL</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-5 h-5" alt="MongoDB">
+      <span>MongoDB</span>
+    </div>
+
+    <!-- DESIGN / PM TOOLS -->
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="w-5 h-5" alt="Figma">
+      <span>Figma</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://static-00.iconduck.com/assets.00/adobe-xd-icon-512x512-pc4ee7bs.png" class="w-5 h-5" alt="Adobe XD">
+      <span>Adobe XD</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" class="w-5 h-5" alt="Microsoft Office">
+      <span>Microsoft Office</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" class="w-5 h-5" alt="Google Suite">
+      <span>Google Suite</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Trello_logo.svg" class="w-5 h-5" alt="Trello">
+      <span>Trello</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+      <img src="https://cdn.worldvectorlogo.com/logos/jira-1.svg" class="w-5 h-5" alt="Jira">
+      <span>Jira</span>
+    </div>
+
+    <!-- SOFT SKILLS -->
+    <div class="flex items-center gap-2 bg-[#2b2b2b] rounded-full px-4 py-2">
+      <span>🧠 Critical Thinking</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#2b2b2b] rounded-full px-4 py-2">
+      <span>🤝 Collaboration</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#2b2b2b] rounded-full px-4 py-2">
+      <span>🗣️ Communication</span>
+    </div>
+    <div class="flex items-center gap-2 bg-[#2b2b2b] rounded-full px-4 py-2">
+      <span>🎯 Problem Solving</span>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="p-10" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold mb-6 text-center">Contact Me</h2>
+    <div class="max-w-md mx-auto bg-[#1a1a1a] p-6 rounded-xl shadow-md text-center">
+      <p class="text-[#B0B0B0] mb-4">Have a project in mind or just want to say hello?</p>
+      <a href="mailto:nb4048@nyu.edu" class="inline-block bg-[#9DC183] hover:bg-[#7C9E68] text-black font-semibold py-2 px-4 rounded-md transition duration-300">nb4048@nyu.edu</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-transparent text-[#B0B0B0]">
+    <div class="flex justify-center gap-6 mb-4 text-2xl">
+      <a href="https://linkedin.com/in/niharika-bhasin" target="_blank" class="hover:text-[#9DC183]"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/niharikabhasin?tab=repositories" target="_blank" class="hover:text-[#9DC183]"><i class="fab fa-github"></i></a>
+      <a href="mailto:nb4048@nyu.edu" class="hover:text-[#9DC183]"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>© 2025 Niharika | Built with ♥ and Tailwind CSS</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    AOS.init();
+
+    new Typed("#typed-name", {
+      strings: ["Hey, I'm Niharika 👋", "I'm a Software Developer 💻", "Let's build something amazing! 🚀"],
+      typeSpeed: 60,
+      backSpeed: 30,
+      loop: true,
+      smartBackspace: true,
+      showCursor: true,
+      cursorChar: '|',
+    });
+
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80 },
+        color: { value: "#9DC183" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3 },
+        size: { value: 2 },
+        line_linked: {
+          enable: true,
+          distance: 100,
+          color: "#9DC183",
+          opacity: 0.2,
+          width: 1
+        },
+        move: { enable: true, speed: 1 }
+      },
+      interactivity: {
+        events: { onhover: { enable: true, mode: "repulse" } }
+      },
+      retina_detect: true
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  </script>
+</body>
+</html>
