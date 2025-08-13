@@ -18,18 +18,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-
+    body { font-family: 'Poppins', sans-serif; }
     #particles-js {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -10;
-      background-color: #0f0f0f;
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      z-index: -10; background-color: #0f0f0f;
     }
   </style>
 </head>
@@ -39,115 +31,64 @@
   <div id="particles-js"></div>
 
   <!-- Navbar -->
-  <nav class="fixed top-0 w-full bg-[#0f0f0f] p-4 flex justify-center gap-6 z-50 shadow-md backdrop-blur">
+  <nav class="fixed top-0 w-full bg-[#0f0f0f]/90 p-4 flex justify-center gap-6 z-50 shadow-md backdrop-blur">
     <a href="#about" class="hover:text-[#9DC183] transition">About</a>
-    <a href="#projects" class="hover:text-[#9DC183] transition">Projects</a>
     <a href="#experience" class="hover:text-[#9DC183] transition">Experience</a>
+    <a href="#projects" class="hover:text-[#9DC183] transition">Projects</a>
     <a href="#skills" class="hover:text-[#9DC183] transition">Skills</a>
     <a href="#contact" class="hover:text-[#9DC183] transition">Contact</a>
-
   </nav>
   <div class="h-16"></div>
 
   <!-- Hero Section -->
-  <header class="flex flex-col md:flex-row items-center justify-center gap-10 text-center md:text-left py-24 px-6">
+  <header class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 text-center md:text-left py-20 md:py-24 px-6">
     <!-- Profile Image -->
     <img src="profile.jpg" alt="Profile Photo"
-      class="w-[280px] h-[350px] object-cover rounded-xl border-4 border-[#9DC183] shadow-xl"
-    />
+         class="w-[260px] h-[330px] md:w-[280px] md:h-[350px] object-cover rounded-xl border-4 border-[#9DC183] shadow-xl"/>
 
-    <!-- Typing Text -->
-    <div class="max-w-xl">
-      <h1 id="typed-name" class="text-3xl md:text-5xl font-extrabold mb-4 drop-shadow-lg min-h-[64px] break-words text-center md:text-left"></h1>
-      <p class="text-xl text-[#B0B0B0] mb-6">MS CS @ NYU</p>
-      <p class="text-xl text-[#B0B0B0] mb-6">Building seamless full-stack applications and data-driven AI/ML systems with a user-first mindset. I bridge technical depth with intuitive design to deliver real-world impact.</p>
+    <!-- Typing Text + Tagline -->
+    <div class="max-w-2xl space-y-3 md:space-y-4">
+      <h1 id="typed-name" class="text-3xl md:text-5xl font-extrabold drop-shadow-lg leading-tight min-h-[2.5rem] md:min-h-[3.5rem]"></h1>
+      <p class="text-lg md:text-xl text-[#B0B0B0]">MS CS @ NYU</p>
 
-      <div class="flex gap-4 flex-wrap justify-center md:justify-start">
+      <!-- Headline with improved wrapping/spacing -->
+      <p class="text-base md:text-xl text-[#B0B0B0] leading-snug md:leading-normal">
+        Creating the infrastructure behind intelligent, user-driven products.
+        Turning complexity into smooth, intuitive experiences.
+      </p>
+
+      <div class="flex gap-3 md:gap-4 flex-wrap justify-center md:justify-start pt-2">
         <a href="#projects" class="bg-[#9DC183] hover:bg-[#7C9E68] text-black font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300">
           View Projects
         </a>
-        <a href="Niharika_Bhasin_Resume.pdf" target="_blank" class="border border-[#9DC183] text-[#9DC183] hover:bg-[#9DC183] hover:text-black font-semibold py-3 px-6 rounded-lg shadow transition duration-300">
-            View Resume
+        <a href="NiharikaBhasinResume2026.pdf" target="_blank"
+           class="border border-[#9DC183] text-[#9DC183] hover:bg-[#9DC183] hover:text-black font-semibold py-3 px-6 rounded-lg shadow transition duration-300">
+          View Resume
         </a>
       </div>
     </div>
   </header>
-
+  
   <!-- About Section -->
-   <section id="about" class="p-10 max-w-4xl mx-auto" data-aos="fade-up">
-    <h2 class="text-3xl font-semibold mb-4 text-center">👩‍💻 About Me</h2>
-    <div class="text-[#B0B0B0] text-center leading-relaxed space-y-3">
-        <p>
-            Hi, I’m <strong>Niharika</strong> — a developer, designer, and lifelong learner currently pursuing my MS in Computer Science at NYU.
-        </p>
-        <p>
-            I enjoy building full-stack web apps, training AI/ML models, and crafting thoughtful user experiences that feel as good as they work.
-        </p>
-        <p>
-            I’ve collaborated with startups, freelanced with 10+ clients, and led tech + design for projects I truly care about. Whether it’s code, design, or something in between — I love solving problems creatively.
-        </p>
-        <p class="font-semibold text-[#F5F5F5]">
-            Feel free to reach out — always happy to chat, brainstorm, or just talk tech ☕.
-        </p>
-    </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects" class="p-10" data-aos="fade-up">
-  <h2 class="text-3xl font-semibold mb-6 text-center">🚀 Projects</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-
-    <!-- Employee Attrition Prediction -->
-    <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 group hover:scale-[1.03]">
-      <img src="employee_project.jpg" alt="Analytics" class="w-full h-48 object-cover rounded-lg mb-4">
-      <h3 class="text-2xl font-semibold group-hover:text-[#9DC183]">Employee Attrition Prediction</h3>
-      <p class="text-[#B0B0B0] mt-2 mb-2">
-        ML pipeline with XGBoost, CatBoost, and SMOTE to predict attrition with 86% accuracy. Used SHAP for interpretability and improved minority class recall by 22%.
-      </p>
-      <p class="text-sm text-[#9DC183] mb-4">Tech Stack: Python, Scikit-learn, XGBoost, CatBoost, SHAP, SMOTE</p>
-      <a href="https://github.com/niharikabhasin/employee-attrition-prediction" target="_blank"
-         class="inline-block text-sm text-[#9DC183] border border-[#9DC183] px-4 py-2 rounded-md hover:bg-[#9DC183] hover:text-black transition">
-         Github Link
-      </a>
-    </div>
-
-    <!-- Chatly: Java Chat App -->
-    <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 group hover:scale-[1.03]">
-      <img src="chatly_project.jpg" alt="Chat App" class="w-full h-48 object-cover rounded-lg mb-4">
-      <h3 class="text-2xl font-semibold group-hover:text-[#9DC183]">Chatly: Java Chat App</h3>
-      <p class="text-[#B0B0B0] mt-2 mb-2">
-        Multi-user real-time chat app with Java Swing, MySQL, and socket programming. Includes login, avatars, emoji picker, and custom themes.
-      </p>
-      <p class="text-sm text-[#9DC183] mb-4">Tech Stack: Java, Swing, MySQL, TCP Sockets, SHA-256</p>
-      <a href="https://github.com/niharikabhasin/Chatly-MultiUser-Java-ChatApp" target="_blank"
-         class="inline-block text-sm text-[#9DC183] border border-[#9DC183] px-4 py-2 rounded-md hover:bg-[#9DC183] hover:text-black transition">
-         Github Link
-      </a>
-    </div>
-
-    <!-- CodeSync -->
-    <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 group hover:scale-[1.03]">
-      <img src="codesync_project.jpg" alt="AWS Cloud" class="w-full h-48 object-cover rounded-lg mb-4">
-      <h3 class="text-2xl font-semibold group-hover:text-[#9DC183]">CodeSync</h3>
-      <p class="text-[#B0B0B0] mt-2 mb-2">
-        Real-time collaborative code editor using React.js, AWS Lambda, DynamoDB, and WebSockets. Supports multi-user execution via EC2 and S3.
-      </p>
-      <p class="text-sm text-[#9DC183] mb-4">Tech Stack: React.js, AWS Lambda, API Gateway, DynamoDB, EC2, S3, WebSockets</p>
-    </div>
-
-    <!-- Portfolio Website -->
-    <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 group hover:scale-[1.03]">
-      <img src="portfolio_project.jpg" alt="Portfolio" class="w-full h-48 object-cover rounded-lg mb-4">
-      <h3 class="text-2xl font-semibold group-hover:text-[#9DC183]">Portfolio Website</h3>
-      <p class="text-[#B0B0B0] mt-2 mb-2">
-        Personal website crafted with Tailwind CSS, AOS animations, and JavaScript. Clean UI, responsive layout, and dynamic content with Typing.js + Particles.js.
-      </p>
-      <p class="text-sm text-[#9DC183] mb-4">Tech Stack: HTML, CSS, JavaScript, Tailwind CSS, AOS, Typing.js, Particles.js</p>
-      <a href="https://github.com/niharikabhasin/niharika-portfolio" target="_blank"
-         class="inline-block text-sm text-[#9DC183] border border-[#9DC183] px-4 py-2 rounded-md hover:bg-[#9DC183] hover:text-black transition">
-         Github Link
-      </a>
-    </div>
+<section id="about" class="p-10 max-w-4xl mx-auto" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold mb-4 text-center">👩‍💻 About Me</h2>
+  <div class="text-[#B0B0B0] text-center leading-relaxed space-y-4">
+    
+    <p>
+      <strong>Hi, I’m Niharika</strong> — a developer, designer, and lifelong learner pursuing my MS in Computer Science at NYU.
+    </p>
+    
+    <p>
+      <strong>Currently:</strong> Backend Engineering Intern at <strong>Toricent Labs</strong>, where I’ve developed 50+ AWS Lambda functions, architected secure APIs, and led a high-impact Firebase → AWS migration to improve performance, scalability, and reliability.
+    </p>
+    
+    <p>
+      <strong>Also:</strong> I create full-stack applications, train AI/ML models, and design user-first experiences that combine technical excellence with intuitive usability.
+    </p>
+    
+    <p class="font-semibold text-[#F5F5F5]">
+      Feel free to reach out — always happy to chat, brainstorm, or just talk tech ☕.
+    </p>
 
   </div>
 </section>
@@ -155,40 +96,239 @@
 <!-- Experience Section -->
 <section id="experience" class="p-10" data-aos="fade-up">
   <h2 class="text-3xl font-semibold mb-6 text-center">💼 Experience</h2>
-  <div class="space-y-10">
+  <div class="space-y-10 max-w-5xl mx-auto">
 
-    <!-- Growth School -->
+    <!-- Toricent Labs -->
     <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md">
-      <h3 class="text-xl font-semibold text-[#9DC183]">Software Development Intern @ Growth School</h3>
-      <p class="text-[#B0B0B0] text-sm mb-2">Mar 2023 – July 2023 · Delhi, India</p>
+      <h3 class="text-xl font-semibold text-[#9DC183]">SWE Intern @ Toricent Labs</h3>
+      <p class="text-[#B0B0B0] text-sm mb-2">Jun 2025 – Aug 2025 · New York City, USA</p>
       <ul class="list-disc list-inside text-[#CCCCCC] text-sm space-y-1">
-        <li>Built and scaled RESTful APIs using Django, PostgreSQL, and Redis to support 3x user concurrency.</li>
-        <li>Reduced page latency by 40% via query tuning, caching, and ORM profiling.</li>
-        <li>Developed ETL pipelines in Python; used cohort analysis and SQL to drive A/B tested features, boosting retention by 28%.</li>
-        <li>Containerized services using Docker and implemented JWT auth, CI/CD via GitHub Actions, and Agile collaboration.</li>
+        <li>Engineered and deployed <strong>50+ AWS Lambda</strong> functions integrated with API Gateway, DynamoDB, and CloudWatch; validated endpoints via Postman.</li>
+        <li>Led an end-to-end <strong>Firebase → AWS migration</strong> using Cognito, SES, SNS, and Secrets Manager to redesign for scalable serverless architecture.</li>
+        <li>Operated as the sole server-side owner in a fast-paced startup, delivering robust APIs, auth flows, and real-time data pipelines for the production app.</li>
+        <li>Improved reliability with centralized logging, alerts, and health checks via CloudWatch, contributing to <strong>99.9% uptime</strong> post-migration.</li>
       </ul>
     </div>
 
     <!-- Tynker -->
     <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md">
       <h3 class="text-xl font-semibold text-[#9DC183]">Product Intern @ Tynker</h3>
-      <p class="text-[#B0B0B0] text-sm mb-2">May 2021 – Dec 2021 · Remote, United States</p>
+      <p class="text-[#B0B0B0] text-sm mb-2">May 2021 – Dec 2021 · Delhi, India</p>
       <ul class="list-disc list-inside text-[#CCCCCC] text-sm space-y-1">
-        <li>Designed and launched K12 coding features for 1M+ students; increased engagement and NPS.</li>
-        <li>Automated QA with Python and CI tools, cutting manual testing time by 30%.</li>
-        <li>Used SQL and Google Analytics to improve lesson completion and user retention by 15%.</li>
+        <li>Ran usability tests with <strong>50+ K–8</strong> students/teachers to identify onboarding and lesson completion friction.</li>
+        <li>Prototyped <strong>6+ gamified modules</strong> in Figma, contributing to a <strong>17% increase</strong> in weekly engagement.</li>
+        <li>Partnered with engineering/curriculum to ship roadmap-aligned features; used SQL and Mixpanel to inform prioritization.</li>
+        <li>Redesigned dashboard/lesson flow for two core modules, reducing drop-off by <strong>22%</strong> via layout simplification and better visual hierarchy.</li>
       </ul>
     </div>
+
+    <!-- Growth School -->
+    <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md">
+      <h3 class="text-xl font-semibold text-[#9DC183]">Software Development Intern @ Growth School</h3>
+      <p class="text-[#B0B0B0] text-sm mb-2">Mar 2023 – July 2023 · Delhi, India</p>
+      <ul class="list-disc list-inside text-[#CCCCCC] text-sm space-y-1">
+        <li>Built and scaled RESTful APIs using Django, PostgreSQL, and Redis to support 3× user concurrency.</li>
+        <li>Reduced page latency by 40% via query tuning, caching, and ORM profiling.</li>
+        <li>Developed ETL pipelines in Python; used cohort analysis and SQL to drive A/B tested features, boosting retention by 28%.</li>
+        <li>Containerized services using Docker and implemented JWT auth, CI/CD via GitHub Actions, and Agile collaboration.</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
-<!-- Leadership & Extracurriculars -->
+  <!-- Projects Section -->
+  <section id="projects" class="p-10" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold mb-6 text-center">🚀 Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+      <!-- Employee Attrition Prediction -->
+      <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 group hover:scale-[1.03]">
+        <img src="employee_project.jpg" alt="Analytics" class="w-full h-48 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold group-hover:text-[#9DC183]">Employee Attrition Prediction</h3>
+        <p class="text-[#B0B0B0] mt-2 mb-2">
+          ML pipeline with XGBoost, CatBoost, and SMOTE to predict attrition with 86% accuracy. Used SHAP for interpretability and improved minority class recall by 22%.
+        </p>
+        <p class="text-sm text-[#9DC183] mb-4">Tech Stack: Python, Scikit-learn, XGBoost, CatBoost, SHAP, SMOTE</p>
+        <a href="https://github.com/niharikabhasin/employee-attrition-prediction" target="_blank"
+           class="inline-block text-sm text-[#9DC183] border border-[#9DC183] px-4 py-2 rounded-md hover:bg-[#9DC183] hover:text-black transition">
+          Github Link
+        </a>
+      </div>
+
+      <!-- Chatly: Java Chat App -->
+      <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 group hover:scale-[1.03]">
+        <img src="chatly_project.jpg" alt="Chat App" class="w-full h-48 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold group-hover:text-[#9DC183]">Chatly: Java Chat App</h3>
+        <p class="text-[#B0B0B0] mt-2 mb-2">
+          Multi-user real-time chat app with Java Swing, MySQL, and socket programming. Includes login, avatars, emoji picker, and custom themes.
+        </p>
+        <p class="text-sm text-[#9DC183] mb-4">Tech Stack: Java, Swing, MySQL, TCP Sockets, SHA-256</p>
+        <a href="https://github.com/niharikabhasin/Chatly-MultiUser-Java-ChatApp" target="_blank"
+           class="inline-block text-sm text-[#9DC183] border border-[#9DC183] px-4 py-2 rounded-md hover:bg-[#9DC183] hover:text-black transition">
+          Github Link
+        </a>
+      </div>
+
+      <!-- CodeSync -->
+      <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 group hover:scale-[1.03]">
+        <img src="codesync_project.jpg" alt="AWS Cloud" class="w-full h-48 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold group-hover:text-[#9DC183]">CodeSync</h3>
+        <p class="text-[#B0B0B0] mt-2 mb-2">
+          Real-time collaborative code editor using React.js, AWS Lambda, DynamoDB, and WebSockets. Supports multi-user execution via EC2 and S3.
+        </p>
+        <p class="text-sm text-[#9DC183] mb-4">Tech Stack: React.js, AWS Lambda, API Gateway, DynamoDB, EC2, S3, WebSockets</p>
+      </div>
+
+      <!-- Portfolio Website -->
+      <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 group hover:scale-[1.03]">
+        <img src="portfolio_project.jpg" alt="Portfolio" class="w-full h-48 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold group-hover:text-[#9DC183]">Portfolio Website</h3>
+        <p class="text-[#B0B0B0] mt-2 mb-2">
+          Personal website crafted with Tailwind CSS, AOS animations, and JavaScript. Clean UI, responsive layout, and dynamic content with Typing.js + Particles.js.
+        </p>
+        <p class="text-sm text-[#9DC183] mb-4">Tech Stack: HTML, CSS, JavaScript, Tailwind CSS, AOS, Typing.js, Particles.js</p>
+        <a href="https://github.com/niharikabhasin/niharika-portfolio" target="_blank"
+           class="inline-block text-sm text-[#9DC183] border border-[#9DC183] px-4 py-2 rounded-md hover:bg-[#9DC183] hover:text-black transition">
+          Github Link
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Skills Section -->
+  <section id="skills" class="p-10 pt-6" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold mb-6 text-center">💡 Skills</h2>
+
+    <div class="flex flex-wrap justify-center gap-4 text-sm max-w-6xl mx-auto">
+      <!-- LANGUAGES -->
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-5 h-5" alt="Python">
+        <span>Python</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-5 h-5" alt="Java">
+        <span>Java</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" class="w-5 h-5" alt="C++">
+        <span>C/C++</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-5 h-5" alt="JavaScript">
+        <span>JavaScript</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-5 h-5" alt="HTML">
+        <span>HTML/CSS</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" class="w-5 h-5" alt="SQL">
+        <span>SQL</span>
+      </div>
+
+      <!-- FRAMEWORKS & LIBRARIES -->
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" class="w-5 h-5" alt="Django">
+        <span>Django</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" class="w-5 h-5" alt="PyTorch">
+        <span>PyTorch</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://sklearn.org/stable/_static/img/scikit-learn-logo-small.png" class="w-5 h-5" alt="Scikit-learn">
+        <span>Scikit-learn</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-5 h-5" alt="React">
+        <span>React.js</span>
+      </div>
+
+      <!-- TOOLS & PLATFORMS -->
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="w-5 h-5" alt="Docker">
+        <span>Docker</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" class="w-5 h-5" alt="Jenkins">
+        <span>Jenkins</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg" class="w-5 h-5" alt="AWS">
+        <span>AWS (EC2, S3, Lambda)</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-5 h-5" alt="Git">
+        <span>Git</span>
+      </div>
+
+      <!-- DATABASES -->
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="w-5 h-5" alt="PostgreSQL">
+        <span>PostgreSQL</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-5 h-5" alt="MongoDB">
+        <span>MongoDB</span>
+      </div>
+
+      <!-- DESIGN / PM TOOLS -->
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="w-5 h-5" alt="Figma">
+        <span>Figma</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://static-00.iconduck.com/assets.00/adobe-xd-icon-512x512-pc4ee7bs.png" class="w-5 h-5" alt="Adobe XD">
+        <span>Adobe XD</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" class="w-5 h-5" alt="Microsoft Office">
+        <span>Microsoft Office</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" class="w-5 h-5" alt="Google Suite">
+        <span>Google Suite</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Trello_logo.svg" class="w-5 h-5" alt="Trello">
+        <span>Trello</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
+        <img src="https://cdn.worldvectorlogo.com/logos/jira-1.svg" class="w-5 h-5" alt="Jira">
+        <span>Jira</span>
+      </div>
+
+      <!-- SOFT SKILLS -->
+      <div class="flex items-center gap-2 bg-[#2b2b2b] rounded-full px-4 py-2"><span>🧠 Critical Thinking</span></div>
+      <div class="flex items-center gap-2 bg-[#2b2b2b] rounded-full px-4 py-2"><span>🤝 Collaboration</span></div>
+      <div class="flex items-center gap-2 bg-[#2b2b2b] rounded-full px-4 py-2"><span>🗣️ Communication</span></div>
+      <div class="flex items-center gap-2 bg-[#2b2b2b] rounded-full px-4 py-2"><span>🎯 Problem Solving</span></div>
+    </div>
+  </section>
+
+  <!-- Leadership & More -->
 <section id="leadership" class="p-10 pt-4" data-aos="fade-up">
-  <h2 class="text-3xl font-semibold mb-6 text-center">🌟 Leadership & More</h2>
-  <div class="space-y-10">
+  <h2 class="text-3xl font-semibold mb-6 text-center">
+    <span class="inline-block mr-2">✨</span>Leadership & More
+  </h2>
+
+  <div class="space-y-8 max-w-5xl mx-auto">
+
+    <!-- Graduate Assistant -->
+    <div class="bg-[#1a1a1a] p-6 md:p-7 rounded-2xl shadow-md">
+      <h3 class="text-xl font-semibold text-[#9DC183]">Graduate Assistant @ NYU</h3>
+      <p class="text-[#B0B0B0] text-sm mb-2">2025 – Present</p>
+      <ul class="list-disc list-inside text-[#CCCCCC] text-sm space-y-1">
+        <li>Maintain day-to-day operations of the Electrical & Computer Engineering (ECE) department.</li>
+        <li>Coordinate department functioning, events, and administrative tasks to ensure smooth workflows.</li>
+      </ul>
+    </div>
 
     <!-- Python Mentor -->
-    <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md">
+    <div class="bg-[#1a1a1a] p-6 md:p-7 rounded-2xl shadow-md">
       <h3 class="text-xl font-semibold text-[#9DC183]">Python Mentor @ Coding Camps</h3>
       <p class="text-[#B0B0B0] text-sm mb-2">2022 – 2023</p>
       <ul class="list-disc list-inside text-[#CCCCCC] text-sm space-y-1">
@@ -198,7 +338,7 @@
     </div>
 
     <!-- Hackathon Leader -->
-    <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md">
+    <div class="bg-[#1a1a1a] p-6 md:p-7 rounded-2xl shadow-md">
       <h3 class="text-xl font-semibold text-[#9DC183]">Hackathon Leader @ SRM Institute</h3>
       <p class="text-[#B0B0B0] text-sm mb-2">2021 – 2022</p>
       <ul class="list-disc list-inside text-[#CCCCCC] text-sm space-y-1">
@@ -207,8 +347,8 @@
       </ul>
     </div>
 
-    <!-- Freelance Design -->
-    <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md">
+    <!-- Freelance UI/UX Designer -->
+    <div class="bg-[#1a1a1a] p-6 md:p-7 rounded-2xl shadow-md">
       <h3 class="text-xl font-semibold text-[#9DC183]">Freelance UI/UX Designer</h3>
       <p class="text-[#B0B0B0] text-sm mb-2">2020 – Present</p>
       <ul class="list-disc list-inside text-[#CCCCCC] text-sm space-y-1">
@@ -216,126 +356,7 @@
         <li>Helped early-stage founders build landing pages, dashboards, and product prototypes with responsive design.</li>
       </ul>
     </div>
-  </div>
-</section>
 
-<!-- SKILLS SECTION -->
-<section id="skills" class="p-10 pt-6" data-aos="fade-up">
-  <h2 class="text-3xl font-semibold mb-6 text-center">💡 Skills</h2>
-
-  <div class="flex flex-wrap justify-center gap-4 text-sm">
-
-    <!-- LANGUAGES -->
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-5 h-5" alt="Python">
-      <span>Python</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-5 h-5" alt="Java">
-      <span>Java</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" class="w-5 h-5" alt="C++">
-      <span>C/C++</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-5 h-5" alt="JavaScript">
-      <span>JavaScript</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-5 h-5" alt="HTML">
-      <span>HTML/CSS</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" class="w-5 h-5" alt="SQL">
-      <span>SQL</span>
-    </div>
-
-    <!-- FRAMEWORKS & LIBRARIES -->
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" class="w-5 h-5" alt="Django">
-      <span>Django</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" class="w-5 h-5" alt="PyTorch">
-      <span>PyTorch</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://sklearn.org/stable/_static/img/scikit-learn-logo-small.png" class="w-5 h-5" alt="Scikit-learn">
-      <span>Scikit-learn</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-5 h-5" alt="React">
-      <span>React.js</span>
-    </div>
-
-    <!-- TOOLS & PLATFORMS -->
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="w-5 h-5" alt="Docker">
-      <span>Docker</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" class="w-5 h-5" alt="Jenkins">
-      <span>Jenkins</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg" class="w-5 h-5" alt="AWS">
-      <span>AWS (EC2, S3, Lambda)</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-5 h-5" alt="Git">
-      <span>Git</span>
-    </div>
-
-    <!-- DATABASES -->
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="w-5 h-5" alt="PostgreSQL">
-      <span>PostgreSQL</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-5 h-5" alt="MongoDB">
-      <span>MongoDB</span>
-    </div>
-
-    <!-- DESIGN / PM TOOLS -->
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="w-5 h-5" alt="Figma">
-      <span>Figma</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://static-00.iconduck.com/assets.00/adobe-xd-icon-512x512-pc4ee7bs.png" class="w-5 h-5" alt="Adobe XD">
-      <span>Adobe XD</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" class="w-5 h-5" alt="Microsoft Office">
-      <span>Microsoft Office</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" class="w-5 h-5" alt="Google Suite">
-      <span>Google Suite</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Trello_logo.svg" class="w-5 h-5" alt="Trello">
-      <span>Trello</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2">
-      <img src="https://cdn.worldvectorlogo.com/logos/jira-1.svg" class="w-5 h-5" alt="Jira">
-      <span>Jira</span>
-    </div>
-
-    <!-- SOFT SKILLS -->
-    <div class="flex items-center gap-2 bg-[#2b2b2b] rounded-full px-4 py-2">
-      <span>🧠 Critical Thinking</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#2b2b2b] rounded-full px-4 py-2">
-      <span>🤝 Collaboration</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#2b2b2b] rounded-full px-4 py-2">
-      <span>🗣️ Communication</span>
-    </div>
-    <div class="flex items-center gap-2 bg-[#2b2b2b] rounded-full px-4 py-2">
-      <span>🎯 Problem Solving</span>
-    </div>
   </div>
 </section>
 
@@ -382,25 +403,19 @@
         shape: { type: "circle" },
         opacity: { value: 0.3 },
         size: { value: 2 },
-        line_linked: {
-          enable: true,
-          distance: 100,
-          color: "#9DC183",
-          opacity: 0.2,
-          width: 1
-        },
+        line_linked: { enable: true, distance: 100, color: "#9DC183", opacity: 0.2, width: 1 },
         move: { enable: true, speed: 1 }
       },
-      interactivity: {
-        events: { onhover: { enable: true, mode: "repulse" } }
-      },
+      interactivity: { events: { onhover: { enable: true, mode: "repulse" } } },
       retina_detect: true
     });
 
+    // Smooth scroll for same-page links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener("click", function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+        const el = document.querySelector(this.getAttribute("href"));
+        if (el) el.scrollIntoView({ behavior: "smooth" });
       });
     });
   </script>
