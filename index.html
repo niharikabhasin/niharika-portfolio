@@ -564,3 +564,254 @@
   </script>
 </body>
 </html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Niharika | Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; background-color: #0f0f0f; }
+    #particles-js {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      z-index: -10; background-color: #0f0f0f;
+    }
+    .project-card {
+      background-color: #111;
+      border: 1px solid #222;
+      transition: all 0.3s ease;
+    }
+    .project-card:hover {
+      border-color: #333;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body class="text-[#F5F5F5] leading-relaxed tracking-wide relative overflow-x-hidden">
+
+  <div id="particles-js"></div>
+
+  <nav class="fixed top-0 w-full bg-[#0f0f0f]/90 p-4 flex justify-center gap-6 z-50 shadow-md backdrop-blur">
+    <a href="#about" class="hover:text-[#9DC183] transition">About</a>
+    <a href="#experience" class="hover:text-[#9DC183] transition">Experience</a>
+    <a href="#projects" class="hover:text-[#9DC183] transition">Projects</a>
+    <a href="#skills" class="hover:text-[#9DC183] transition">Skills</a>
+    <a href="#contact" class="hover:text-[#9DC183] transition">Contact</a>
+  </nav>
+  <div class="h-16"></div>
+
+  <header class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 text-center md:text-left py-20 md:py-24 px-6">
+    <img src="profile.jpg" alt="Profile Photo"
+         class="w-[260px] h-[330px] md:w-[280px] md:h-[350px] object-cover rounded-xl border-4 border-[#9DC183] shadow-xl"/>
+    <div class="max-w-2xl space-y-3 md:space-y-4">
+      <h1 id="typed-name" class="text-3xl md:text-5xl font-extrabold drop-shadow-lg leading-tight min-h-[2.5rem] md:min-h-[3.5rem]"></h1>
+      <p class="text-lg md:text-xl text-[#B0B0B0]">MS CS @ NYU</p>
+      <p class="text-base md:text-xl text-[#B0B0B0] leading-snug md:leading-normal">
+        Creating the infrastructure behind intelligent, user-driven products.
+        Turning complexity into smooth, intuitive experiences.
+      </p>
+      <div class="flex gap-3 md:gap-4 flex-wrap justify-center md:justify-start pt-2">
+        <a href="#projects" class="bg-[#9DC183] hover:bg-[#7C9E68] text-black font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300">View Projects</a>
+        <a href="Niharika_Bhasin_Resume_2026.pdf" target="_blank" class="border border-[#9DC183] text-[#9DC183] hover:bg-[#9DC183] hover:text-black font-semibold py-3 px-6 rounded-lg shadow transition duration-300">View Resume</a>
+      </div>
+    </div>
+  </header>
+  
+  <section id="about" class="p-10 max-w-4xl mx-auto" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold mb-4 text-center">👩‍💻 About Me</h2>
+    <div class="text-[#B0B0B0] text-center leading-relaxed space-y-4">
+      <p><strong>Hi, I’m Niharika</strong> — a developer, designer, and NYU MS CS student.</p>
+      <p><strong>Most Recently:</strong> Backend Intern at <strong>Toricent Labs</strong>, architecting 50+ AWS Lambda functions and leading a major Firebase → AWS migration.</p>
+      <p class="font-semibold text-[#F5F5F5]">Feel free to reach out — always happy to chat tech ☕.</p>
+    </div>
+  </section>
+
+  <section id="experience" class="p-10" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold mb-6 text-center">💼 Experience</h2>
+    <div class="space-y-6 max-w-5xl mx-auto">
+      <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-md">
+        <h3 class="text-xl font-semibold text-[#9DC183]">SWE Intern @ Toricent Labs</h3>
+        <p class="text-[#B0B0B0] text-sm mb-2">Jun 2025 – Aug 2025 · NYC</p>
+        <ul class="list-disc list-inside text-[#CCCCCC] text-sm space-y-1">
+          <li>Deployed <strong>50+ AWS Lambda</strong> functions via API Gateway and DynamoDB.</li>
+          <li>Led <strong>Firebase → AWS migration</strong> using Cognito, SES, and Secrets Manager.</li>
+        </ul>
+      </div>
+      </div>
+  </section>
+
+  <section id="projects" class="p-10" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold mb-12 text-left tracking-tight">🚀 Selected Works <span class="text-gray-500 text-lg font-normal">/ 2024-2026</span></h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="project-card p-8 rounded-lg flex flex-col justify-between h-full group">
+          <div>
+            <div class="flex justify-between items-start">
+              <h3 class="text-2xl font-bold tracking-tight">SafeZone <span class="text-gray-600 font-medium text-sm ml-2">2025</span></h3>
+              <span class="text-gray-500 group-hover:text-white transition-colors">↗</span>
+            </div>
+            <p class="text-xs text-[#9DC183] mt-1 uppercase tracking-widest font-semibold">Campus Safety Infrastructure</p>
+            <p class="text-gray-400 mt-4 leading-relaxed text-sm">
+              Real-time incident reporting and safe route planning platform. Integrated live feeds and location services to optimize security response.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-6">
+              <span class="bg-[#1a1a1a] text-[10px] px-3 py-1 rounded text-gray-300">React</span>
+              <span class="bg-[#1a1a1a] text-[10px] px-3 py-1 rounded text-gray-300">Django</span>
+              <span class="bg-[#1a1a1a] text-[10px] px-3 py-1 rounded text-gray-300">AWS Amplify</span>
+            </div>
+          </div>
+          <div class="mt-8 flex justify-between items-end border-t border-[#222] pt-6">
+            <div>
+              <p class="text-xl font-bold">~15%</p>
+              <p class="text-[10px] text-gray-500 uppercase tracking-tighter">Response Latency Reduction</p>
+            </div>
+            <p class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Deployed System</p>
+          </div>
+        </div>
+
+        <div class="project-card p-8 rounded-lg flex flex-col justify-between h-full group">
+          <div>
+            <div class="flex justify-between items-start">
+              <h3 class="text-2xl font-bold tracking-tight">CodeSync <span class="text-gray-600 font-medium text-sm ml-2">2025</span></h3>
+              <span class="text-gray-500 group-hover:text-white transition-colors">↗</span>
+            </div>
+            <p class="text-xs text-[#9DC183] mt-1 uppercase tracking-widest font-semibold">Distributed Code Execution</p>
+            <p class="text-gray-400 mt-4 leading-relaxed text-sm">
+              Collaborative editor with isolated environments. Utilized WebSockets for sync and AWS Lambda for serverless scaling.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-6">
+              <span class="bg-[#1a1a1a] text-[10px] px-3 py-1 rounded text-gray-300">WebSockets</span>
+              <span class="bg-[#1a1a1a] text-[10px] px-3 py-1 rounded text-gray-300">AWS Lambda</span>
+              <span class="bg-[#1a1a1a] text-[10px] px-3 py-1 rounded text-gray-300">DynamoDB</span>
+            </div>
+          </div>
+          <div class="mt-8 flex justify-between items-end border-t border-[#222] pt-6">
+            <div>
+              <p class="text-xl font-bold">&lt;50ms</p>
+              <p class="text-[10px] text-gray-500 uppercase tracking-tighter">Sync Latency</p>
+            </div>
+            <p class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Cloud Native</p>
+          </div>
+        </div>
+
+        <div class="project-card p-8 rounded-lg flex flex-col justify-between h-full group">
+          <div>
+            <div class="flex justify-between items-start">
+              <h3 class="text-2xl font-bold tracking-tight">AttritX <span class="text-gray-600 font-medium text-sm ml-2">2025</span></h3>
+              <span class="text-gray-500 group-hover:text-white transition-colors">↗</span>
+            </div>
+            <p class="text-xs text-[#9DC183] mt-1 uppercase tracking-widest font-semibold">Predictive ML Pipeline</p>
+            <p class="text-gray-400 mt-4 leading-relaxed text-sm">
+              XGBoost/CatBoost pipeline for churn prediction. Leveraged SMOTE and SHAP to improve minority-class recall by 22%.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-6">
+              <span class="bg-[#1a1a1a] text-[10px] px-3 py-1 rounded text-gray-300">Python</span>
+              <span class="bg-[#1a1a1a] text-[10px] px-3 py-1 rounded text-gray-300">XGBoost</span>
+              <span class="bg-[#1a1a1a] text-[10px] px-3 py-1 rounded text-gray-300">SHAP</span>
+            </div>
+          </div>
+          <div class="mt-8 flex justify-between items-end border-t border-[#222] pt-6">
+            <div>
+              <p class="text-xl font-bold">86%</p>
+              <p class="text-[10px] text-gray-500 uppercase tracking-tighter">Accuracy Rate</p>
+            </div>
+            <p class="text-[10px] font-bold uppercase tracking-widest text-[#9DC183]">Production Ready</p>
+          </div>
+        </div>
+
+        <div class="project-card p-8 rounded-lg flex flex-col justify-between h-full group">
+          <div>
+            <div class="flex justify-between items-start">
+              <h3 class="text-2xl font-bold tracking-tight">GhostWheel <span class="text-gray-600 font-medium text-sm ml-2">2026</span></h3>
+              <span class="text-gray-500 group-hover:text-white transition-colors">↗</span>
+            </div>
+            <p class="text-xs text-[#9DC183] mt-1 uppercase tracking-widest font-semibold">Low-Latency CV Racing Controller</p>
+            <p class="text-gray-400 mt-4 leading-relaxed text-sm">
+              Real-time computer vision steering engine for Slowroads.io. Decouples AI from render loops using custom PWM algorithms.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-6">
+              <span class="bg-[#1a1a1a] text-[10px] px-3 py-1 rounded text-gray-300">Python</span>
+              <span class="bg-[#1a1a1a] text-[10px] px-3 py-1 rounded text-gray-300">OpenCV</span>
+              <span class="bg-[#1a1a1a] text-[10px] px-3 py-1 rounded text-gray-300">MediaPipe</span>
+            </div>
+          </div>
+          <div class="mt-8 flex justify-between items-end border-t border-[#222] pt-6">
+            <div>
+              <p class="text-xl font-bold">2x FPS</p>
+              <p class="text-[10px] text-gray-500 uppercase tracking-tighter">Framerate Gain</p>
+            </div>
+            <p class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Side Project</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="p-10 pt-6" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold mb-6 text-center">💡 Skills</h2>
+    <div class="flex flex-wrap justify-center gap-4 text-sm max-w-6xl mx-auto">
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2 border border-[#222]">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-5 h-5" alt="Python">
+        <span>Python</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#1a1a1a] rounded-full px-4 py-2 border border-[#222]">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg" class="w-5 h-5" alt="AWS">
+        <span>AWS</span>
+      </div>
+      </div>
+  </section>
+
+  <section id="contact" class="p-10" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold mb-6 text-center">Contact Me</h2>
+    <div class="max-w-md mx-auto bg-[#1a1a1a] p-6 rounded-xl shadow-md text-center border border-[#222]">
+      <a href="mailto:nb4048@nyu.edu" class="inline-block bg-[#9DC183] hover:bg-[#7C9E68] text-black font-semibold py-2 px-6 rounded-md transition duration-300">nb4048@nyu.edu</a>
+    </div>
+  </section>
+
+  <footer class="text-center py-6 text-[#B0B0B0]">
+    <div class="flex justify-center gap-6 mb-4 text-2xl">
+      <a href="#" class="hover:text-[#9DC183]"><i class="fab fa-linkedin"></i></a>
+      <a href="#" class="hover:text-[#9DC183]"><i class="fab fa-github"></i></a>
+    </div>
+    <p>© 2026 Niharika | Built with ♥ and Tailwind</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    AOS.init();
+    new Typed("#typed-name", {
+      strings: ["Hey, I'm Niharika 👋", "I'm a Software Developer 💻"],
+      typeSpeed: 60, backSpeed: 30, loop: true
+    });
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 60 },
+        color: { value: "#9DC183" },
+        opacity: { value: 0.2 },
+        size: { value: 2 },
+        line_linked: { enable: true, distance: 150, color: "#9DC183", opacity: 0.1 },
+        move: { enable: true, speed: 1 }
+      }
+    });
+  </script>
+</body>
+</html>
