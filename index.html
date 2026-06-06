@@ -10,15 +10,15 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:       #0d0d0d;
-      --surface:  #141414;
-      --border:   #1e1e1e;
-      --muted:    #444;
-      --sub:      #777;
-      --body:     #aaa;
-      --text:     #e8e8e8;
-      --white:    #f5f5f5;
-      --accent:   #c8ff6e;   /* one accent, used sparingly */
+      --bg:       #080808;
+      --surface:  #111111;
+      --border:   #1c1c1c;
+      --muted:    #555;
+      --sub:      #888;
+      --body:     #bbb;
+      --text:     #ececec;
+      --white:    #f8f8f8;
+      --accent:   #c8ff6e;
       --font-display: 'Montserrat', sans-serif;
       --font-mono:    'DM Mono', monospace;
       --font-body:    'DM Sans', sans-serif;
@@ -30,8 +30,9 @@
       background: var(--bg);
       color: var(--text);
       font-family: var(--font-body);
-      font-weight: 300;
-      line-height: 1.7;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 1.75;
       overflow-x: hidden;
     }
 
@@ -42,9 +43,9 @@
 
     /* ─── LAYOUT ──────────────────────────────────── */
     .container {
-      max-width: 760px;
+      max-width: 980px;
       margin: 0 auto;
-      padding: 0 2rem;
+      padding: 0 3rem;
     }
 
     /* ─── NAV ─────────────────────────────────────── */
@@ -90,14 +91,13 @@
     #hero {
       min-height: 100vh;
       display: flex;
-      align-items: flex-end;
-      padding-bottom: 5rem;
-      padding-top: 6rem;
+      align-items: center;
+      padding: 6rem 0 4rem;
     }
     .hero-inner {
-      max-width: 760px;
+      max-width: 980px;
       margin: 0 auto;
-      padding: 0 2rem;
+      padding: 0 3rem;
     }
     .hero-label {
       font-family: var(--font-mono);
@@ -113,11 +113,11 @@
     h1 {
       font-family: var(--font-display);
       font-weight: 700;
-      font-size: clamp(1.8rem, 5vw, 3.25rem);
-      line-height: 1.1;
-      letter-spacing: -0.02em;
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
       color: var(--white);
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       white-space: nowrap;
     }
 
@@ -140,9 +140,9 @@
     .hero-quote {
       font-family: var(--font-mono);
       font-style: italic;
-      font-size: 0.78rem;
+      font-size: 0.9rem;
       color: var(--sub);
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
       letter-spacing: 0.02em;
     }
 
@@ -204,11 +204,11 @@
       color: var(--sub);
       margin-bottom: 0.4rem;
     }
-    .rn-val { font-size: 0.85rem; color: var(--body); line-height: 1.6; }
+    .rn-val { font-size: 0.95rem; color: var(--text); line-height: 1.6; }
     .rn-sub {
       display: block;
       font-size: 0.75rem;
-      color: var(--muted);
+      color: #888;
       margin-top: 0.25rem;
       font-style: italic;
     }
@@ -237,7 +237,7 @@
     }
 
     .hero-desc {
-      font-size: 1.1rem;
+      font-size: 1.25rem;
       color: var(--text);
       max-width: 480px;
       margin-bottom: 0.75rem;
@@ -307,7 +307,7 @@
     }
     .about-text p {
       color: var(--body);
-      font-size: 0.95rem;
+      font-size: 1rem;
       margin-bottom: 1rem;
     }
     .about-text p strong { color: var(--text); font-weight: 500; }
@@ -348,7 +348,7 @@
     }
     .exp-content h3 {
       font-family: var(--font-display);
-      font-size: 1rem;
+      font-size: 1.1rem;
       font-weight: 700;
       color: var(--white);
       margin-bottom: 0.15rem;
@@ -366,7 +366,7 @@
       padding: 0;
     }
     .exp-content ul li {
-      font-size: 0.85rem;
+      font-size: 0.92rem;
       color: var(--body);
       padding: 0.2rem 0;
       padding-left: 1rem;
@@ -389,14 +389,18 @@
     }
     .project-card {
       background: var(--bg);
-      padding: 1.75rem;
-      transition: background 0.2s;
+      padding: 2rem;
+      transition: background 0.25s, box-shadow 0.25s;
       text-decoration: none;
       display: flex;
       flex-direction: column;
       gap: 0.75rem;
+      position: relative;
     }
-    .project-card:hover { background: var(--surface); }
+    .project-card:hover {
+      background: rgba(200,255,110,0.04);
+      box-shadow: inset 0 0 0 1px rgba(200,255,110,0.12);
+    }
     .project-header {
       display: flex;
       justify-content: space-between;
@@ -404,7 +408,7 @@
     }
     .project-name {
       font-family: var(--font-display);
-      font-size: 1rem;
+      font-size: 1.1rem;
       font-weight: 700;
       color: var(--white);
     }
@@ -421,7 +425,7 @@
       color: var(--sub);
     }
     .project-desc {
-      font-size: 0.82rem;
+      font-size: 0.92rem;
       color: var(--body);
       line-height: 1.6;
     }
@@ -604,9 +608,9 @@
       <!-- Live Spotify widget -->
       <div class="now-playing" id="now-playing">
         <span class="np-dot" id="np-dot"></span>
-        <span class="np-label">I don't work without music — right now:</span>
+        <span class="np-label">I don't work without music. Right now:</span>
         <a class="np-track" id="np-track" href="https://open.spotify.com/track/5z3OntMXnKyyo3CsXHCHdl" target="_blank">
-          Tum Meri Thi — Karneast
+          Tum Meri Thi by Karneast
         </a>
         <span class="np-spotify">↗</span>
       </div>
@@ -620,15 +624,15 @@
       <div class="about-grid">
         <div class="about-text">
           <p>
-            Developer and designer who cares about the whole stack — from database schema to pixel-perfect UI. 
+            Developer and designer who cares about the whole stack, from database schema to pixel-perfect UI. 
             Recently graduated with an <strong>MS in Computer Science from NYU</strong>.
           </p>
           <p>
-            Most recently a <strong>Backend SWE Intern at Toricent Labs</strong>, where I owned the server side solo — 
+            Most recently a <strong>Backend SWE Intern at Toricent Labs</strong>, where I owned the server side solo. 
             50+ Lambda functions, a full Firebase → AWS migration, and 99.9% uptime post-launch.
           </p>
           <p>
-            Before that, <strong>GA at NYU ECE</strong> — built a full-stack lab operations portal that cut P99 latency by 45% 
+            Before that, <strong>GA at NYU ECE</strong>, built a full-stack lab operations portal that cut P99 latency by 45% 
             and eliminated 100% of redundant workflows for 150+ researchers.
           </p>
         </div>
@@ -661,8 +665,8 @@
           <h3>SWE Intern</h3>
           <div class="exp-co">Toricent Labs · New York City</div>
           <ul>
-            <li>Sole server-side owner in a fast-paced startup — 50+ AWS Lambda functions, API Gateway, DynamoDB, CloudWatch.</li>
-            <li>Led end-to-end Firebase → AWS migration (Cognito, SES, SNS, Terraform IaC) — cut infra costs by 30%, zero downtime.</li>
+            <li>Sole server-side owner in a fast-paced startup. 50+ AWS Lambda functions, API Gateway, DynamoDB, CloudWatch.</li>
+            <li>Led end-to-end Firebase → AWS migration (Cognito, SES, SNS, Terraform IaC), cutting infra costs by 30%, zero downtime.</li>
             <li>Reduced P99 API latency by 25% via Redis/DAX caching under peak stress loads.</li>
             <li>Maintained 99.9% uptime with event-driven observability; authored API contracts and deployment runbooks.</li>
           </ul>
@@ -676,9 +680,9 @@
           <div class="exp-co">NYU Dept. of ECE · Brooklyn, NY</div>
           <ul>
             <li>Built a full-stack lab ops portal (FastAPI + React + PostgreSQL) for 150+ concurrent researchers with real-time equipment scheduling.</li>
-            <li>Optimized PostgreSQL indexing and query plans — cut P99 latency by <strong>45%</strong> during peak load.</li>
+            <li>Optimized PostgreSQL indexing and query plans, cutting P99 latency by <strong>45%</strong> during peak load.</li>
             <li>Deployed automated ETL pipelines (Python + Pandas) that eliminated 100% of redundant workflows and cut admin time by 35%.</li>
-            <li>Implemented granular RBAC and custom middleware — 99.99% data integrity across sensitive lab workflows.</li>
+            <li>Implemented granular RBAC and custom middleware, maintaining 99.99% data integrity across sensitive lab workflows.</li>
           </ul>
         </div>
       </div>
@@ -690,7 +694,7 @@
           <div class="exp-co">Tynker · Delhi, India</div>
           <ul>
             <li>Ran usability tests with 50+ K–8 students and teachers; prototyped 6+ gamified Figma modules.</li>
-            <li>Redesigned core lesson flows — reduced drop-off by 22%, lifted weekly engagement by 17%.</li>
+            <li>Redesigned core lesson flows, reducing drop-off by 22%, lifted weekly engagement by 17%.</li>
             <li>Used SQL and Mixpanel for data-driven feature prioritization aligned with product roadmap.</li>
           </ul>
         </div>
@@ -702,7 +706,7 @@
           <h3>Software Development Intern</h3>
           <div class="exp-co">Growth School · Delhi, India</div>
           <ul>
-            <li>Built and scaled RESTful APIs with Django, PostgreSQL, Redis — supported 3× user concurrency.</li>
+            <li>Built and scaled RESTful APIs with Django, PostgreSQL, Redis, supporting 3× user concurrency.</li>
             <li>Reduced page latency by 40% via query tuning, ORM profiling, and caching.</li>
             <li>Built ETL pipelines in Python; cohort analysis + A/B testing boosted retention by 28%.</li>
           </ul>
@@ -752,7 +756,7 @@
             <span class="project-year">2025</span>
           </div>
           <div class="project-type">Distributed Code Collaboration</div>
-          <p class="project-desc">Real-time collaborative editor — WebSockets + AWS SQS for sync, multi-tenant Docker sandboxes on isolated EC2 nodes.</p>
+          <p class="project-desc">Real-time collaborative editor using WebSockets + AWS SQS for sync, multi-tenant Docker sandboxes on isolated EC2 nodes.</p>
           <div class="project-tags">
             <span class="tag">WebSockets</span><span class="tag">AWS Lambda</span><span class="tag">DynamoDB</span><span class="tag">Docker</span>
           </div>
@@ -815,14 +819,14 @@
           <div class="rn-key">Working on</div>
           <div class="rn-val">
             Finding my next role in backend / full-stack engineering across the US.
-            <span class="rn-sub">If you're hiring — <a href="mailto:nb4048@nyu.edu" style="color:var(--accent);text-decoration:none;">let's have a chat.</a></span>
+            <span class="rn-sub">If you're hiring, <a href="mailto:nb4048@nyu.edu" style="color:var(--accent);text-decoration:none;">let's have a chat.</a></span>
           </div>
         </div>
         <div class="rn-item">
           <div class="rn-key">Listening to</div>
           <div class="rn-val">
             <a href="https://open.spotify.com/track/5z3OntMXnKyyo3CsXHCHdl" target="_blank" class="rn-link" id="rn-track-link">
-              <span class="np-dot-inline" id="rn-dot"></span><span id="rn-track-label">Tum Meri Thi — Karneast</span>
+              <span class="np-dot-inline" id="rn-dot"></span><span id="rn-track-label">Tum Meri Thi by Karneast</span>
             </a>
             <span class="rn-sub" id="rn-track-sub">Literally always listening. I don't write a single line of code in silence.</span>
           </div>
@@ -830,8 +834,8 @@
         <div class="rn-item">
           <div class="rn-key">Outside of code</div>
           <div class="rn-val">
-            Coloring &amp; illustration — it's meditative and nothing crashes.
-            <span class="rn-sub">Cooking elaborate meals I definitely had time for. Scrolling home decor inspo on Pinterest at midnight. Using NYC views as an excuse to hit 10k steps — honestly, this city makes it easy.</span>
+            Coloring &amp; illustration. It's meditative and nothing crashes.
+            <span class="rn-sub">Cooking elaborate meals I definitely had time for. Scrolling home decor inspo on Pinterest at midnight. Using NYC views as an excuse to hit 10k steps. Honestly, this city makes it easy.</span>
           </div>
         </div>
         <div class="rn-item">
@@ -868,7 +872,7 @@
     <div class="container">
       <div class="footer-inner">
         <span class="footer-copy">© 2026 Niharika Bhasin</span>
-        <span class="footer-copy">Built with care — no frameworks, no fuss.</span>
+        <span class="footer-copy">Built with care. No frameworks, no fuss.</span>
       </div>
     </div>
   </footer>
@@ -1053,7 +1057,7 @@
     function updateSpotifyUI(data) {
       if (!data || !data.track) return;
 
-      const label = `${data.track.title} — ${data.track.artist}`;
+      const label = `${data.track.title} by ${data.track.artist}`;
       const url   = data.track.url;
 
       // Hero widget
