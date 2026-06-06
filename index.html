@@ -835,24 +835,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container fade-in">
-      <p class="section-label">Contact</p>
-      <p class="contact-main">Let's build<br>something.</p>
-      <p style="color: var(--body); font-size: 0.9rem; max-width: 400px;">
-        Open to full-time SWE roles across the US. Always happy to talk infra, systems, or just good ideas.
-      </p>
-      <br>
-      <a href="mailto:nb4048@nyu.edu" class="contact-email-big">nb4048@nyu.edu</a>
-      <div class="contact-links">
-        <a href="https://linkedin.com/in/niharika-bhasin" target="_blank" class="contact-link">LinkedIn ↗</a>
-        <a href="https://github.com/niharikabhasin" target="_blank" class="contact-link">GitHub ↗</a>
-        <a href="NiharikaBhasinResume2026.pdf" target="_blank" class="contact-link">Resume ↗</a>
-      </div>
-    </div>
-  </section>
-
   <!-- RIGHT NOW -->
   <section id="rightnow">
     <div class="container fade-in">
@@ -868,10 +850,10 @@
         <div class="rn-item">
           <div class="rn-key">Listening to</div>
           <div class="rn-val">
-            <a href="https://open.spotify.com/track/5z3OntMXnKyyo3CsXHCHdl" target="_blank" class="rn-link">
-              <span class="np-dot-inline"></span>Tum Meri Thi — Karneast
+            <a href="https://open.spotify.com/track/5z3OntMXnKyyo3CsXHCHdl" target="_blank" class="rn-link" id="rn-track-link">
+              <span class="np-dot-inline" id="rn-dot"></span><span id="rn-track-label">Tum Meri Thi — Karneast</span>
             </a>
-            <span class="rn-sub">Literally always listening. I don't write a single line of code in silence.</span>
+            <span class="rn-sub" id="rn-track-sub">Literally always listening. I don't write a single line of code in silence.</span>
           </div>
         </div>
         <div class="rn-item">
@@ -888,6 +870,24 @@
             <span class="rn-sub">Also crochet, needle work, and anything that makes me put my phone down. Turns out making things with your hands is pretty good for a brain that never stops running.</span>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container fade-in">
+      <p class="section-label">Contact</p>
+      <p class="contact-main">Let's build<br>something.</p>
+      <p style="color: var(--body); font-size: 0.9rem; max-width: 400px;">
+        Open to full-time SWE roles across the US. Always happy to talk infra, systems, or just good ideas.
+      </p>
+      <br>
+      <a href="mailto:nb4048@nyu.edu" class="contact-email-big">nb4048@nyu.edu</a>
+      <div class="contact-links">
+        <a href="https://linkedin.com/in/niharika-bhasin" target="_blank" class="contact-link">LinkedIn ↗</a>
+        <a href="https://github.com/niharikabhasin" target="_blank" class="contact-link">GitHub ↗</a>
+        <a href="NiharikaBhasinResume2026.pdf" target="_blank" class="contact-link">Resume ↗</a>
       </div>
     </div>
   </section>
@@ -1077,32 +1077,35 @@
     });
 
     // ─── LIVE SPOTIFY NOW PLAYING ──────────────────
-    // After deploying the Vercel function, replace this URL:
     const SPOTIFY_API = '/api/now-playing';
 
     function updateSpotifyUI(data) {
-      const heroTrack  = document.getElementById('np-track');
-      const heroDot    = document.getElementById('np-dot');
-      const rnLink     = document.querySelector('.rn-link');
-      const rnSub      = document.querySelector('.rn-sub');
-
-      if (!data || !data.track) return; // keep hardcoded fallback
+      if (!data || !data.track) return;
 
       const label = `${data.track.title} — ${data.track.artist}`;
       const url   = data.track.url;
 
-      // Update hero widget
+      // Hero widget
+      const heroTrack = document.getElementById('np-track');
+      const heroDot   = document.getElementById('np-dot');
       if (heroTrack) { heroTrack.textContent = label; heroTrack.href = url; }
-
-      // Dot: pulsing if live, dimmed if recently played
       if (heroDot) {
         heroDot.style.opacity       = data.isPlaying ? '1' : '0.4';
         heroDot.style.animationName = data.isPlaying ? 'pulse' : 'none';
       }
 
-      // Update right-now section
-      if (rnLink) { rnLink.childNodes[1].textContent = label; rnLink.href = url; }
-      if (rnSub)  { rnSub.textContent = data.isPlaying ? 'Playing now on Spotify' : 'Last played on Spotify'; }
+      // Right-now section — targeted by ID
+      const rnTrackLabel = document.getElementById('rn-track-label');
+      const rnTrackLink  = document.getElementById('rn-track-link');
+      const rnTrackSub   = document.getElementById('rn-track-sub');
+      const rnDot        = document.getElementById('rn-dot');
+      if (rnTrackLabel) rnTrackLabel.textContent = label;
+      if (rnTrackLink)  rnTrackLink.href = url;
+      if (rnTrackSub)   rnTrackSub.textContent = data.isPlaying ? 'Playing now on Spotify' : 'Last played on Spotify';
+      if (rnDot) {
+        rnDot.style.opacity       = data.isPlaying ? '1' : '0.4';
+        rnDot.style.animationName = data.isPlaying ? 'pulse' : 'none';
+      }
     }
 
     async function fetchNowPlaying() {
@@ -1117,9 +1120,9 @@
       }
     }
 
-    // Fetch on load, then every 30s
+    // Fetch on load, then every 10s
     fetchNowPlaying();
-    setInterval(fetchNowPlaying, 30000);
+    setInterval(fetchNowPlaying, 10000);
   </script>
 </body>
 </html>
